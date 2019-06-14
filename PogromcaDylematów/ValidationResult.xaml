@@ -1,0 +1,36 @@
+﻿<Window x:Class="PogromcaDylematów.ValidationResult"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PogromcaDylematów"
+        mc:Ignorable="d"
+        Title="Rozbieżność danych" Height="150" Width="300"
+        Icon="Resources/icons/iconAlert.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Zbyt duża rozbieżność danych." HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
+        <Label Content="Czy chcesz wyświetlić wyniki?" HorizontalContentAlignment="Center" Grid.Row="1" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
+        <Button Click="YES_Click" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="30">
+            <WrapPanel>
+                <Image Margin="2" Source="Resources/icons/iconAccept.png"/>
+                <TextBlock VerticalAlignment="Center">Tak</TextBlock>
+            </WrapPanel>
+        </Button>
+        <Button Click="NO_Click" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="30" Grid.Column="1">
+            <WrapPanel>
+                <Image Margin="2" Source="Resources/icons/iconCancel.png"/>
+                <TextBlock VerticalAlignment="Center">Nie</TextBlock>
+            </WrapPanel>
+        </Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="PogromcaDylematów.SelectFileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PogromcaDylematów"
+        mc:Ignorable="d"
+        Title="Menu wybooru pliku" Height="300" Width="300"
+        Icon="Resources/icons/iconFind.png">
+    <Grid>
+        <ListBox x:Name="FileExplorer" Margin="10,40,10,40"/>
+        <Label Content="Wybierz plik do wczytania danych" Margin="10,9,10,0" VerticalAlignment="Top"/>
+        <Button Click="AcceptButton" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Height="30">
+            <WrapPanel>
+                <Image Margin="2" Source="Resources/icons/iconAccept.png" />
+                <TextBlock VerticalAlignment="Center">Potwierdź</TextBlock>
+            </WrapPanel>
+        </Button>
+        <Button Click="CancelButton" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Height="30">
+            <WrapPanel>
+                <Image Margin="2" Source="Resources/icons/iconCancel.png"/>
+                <TextBlock VerticalAlignment="Center">Anuluj</TextBlock>
+            </WrapPanel>
+        </Button>
+    </Grid>
+</Window>

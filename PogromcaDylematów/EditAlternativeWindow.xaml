@@ -1,0 +1,41 @@
+﻿<Window x:Class="PogromcaDylematów.EditAlternativeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PogromcaDylematów"
+        mc:Ignorable="d"
+        Title="Edycja alternatywy" Height="320" Width="400"
+        Icon="Resources/icons/iconEdit.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Label Content="Nazwa:" HorizontalAlignment="Left" Margin="10,10,0,10" Width="76" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="InputAlternativeName" Margin="86,21,10,16" TextWrapping="Wrap" VerticalContentAlignment="Center"/>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <Grid  x:Name="scrollView">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" x:Name="ColumnCriteriaName"/>
+                    <ColumnDefinition Width="1*" x:Name="ColumnCriteriaValue"/>
+                </Grid.ColumnDefinitions>
+
+            </Grid>
+        </ScrollViewer>
+        <Button Click="AcceptButton" HorizontalAlignment="Left" Margin="20,15,0,0" Height="30" Grid.Row="2" VerticalAlignment="Top">
+            <WrapPanel>
+                <Image Margin="2" Source="Resources/icons/iconAccept.png"/>
+                <TextBlock VerticalAlignment="Center">Potwierdź</TextBlock>
+            </WrapPanel>
+        </Button>
+        <Button Click="CancelButton" HorizontalAlignment="Right" Margin="0,15,20,0" Grid.Row="2" VerticalAlignment="Top" Height="30">
+            <WrapPanel>
+                <Image Margin="2" Source="Resources/icons/iconCancel.png"/>
+                <TextBlock VerticalAlignment="Center">Anuluj</TextBlock>
+            </WrapPanel>
+        </Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="PogromcaDylematów.FileExistWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PogromcaDylematów"
+        mc:Ignorable="d"
+        Title="Plik już istnieje" Height="150" Width="300"
+        Icon="Resources/icons/iconInfo.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Plik o tej nazwie istnieje. Chcesz go nadpisać?" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="2"/>
+        <Button Click="Yes_Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Grid.Row="1">
+            <WrapPanel>
+                <Image Margin="2" Source="Resources/icons/iconAccept.png"/>
+                <TextBlock VerticalAlignment="Center">Tak</TextBlock>
+            </WrapPanel>
+        </Button>
+        <Button Click="No_Button" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="1" Height="30" Grid.Column="1">
+            <WrapPanel>
+                <Image Margin="2" Source="Resources/icons/iconCancel.png"/>
+                <TextBlock VerticalAlignment="Center">Nie</TextBlock>
+            </WrapPanel>
+        </Button>
+    </Grid>
+</Window>
